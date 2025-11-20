@@ -127,3 +127,38 @@ body {
     color: rgba(240, 240, 240, 0.6);
 }
 
+/* --- 4. Mobile Responsiveness (Fixing the Mobile View) --- */
+@media screen and (max-width: 600px) {
+    
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+        width: 95%;
+    }
+
+    /* Shrink Logo for Mobile */
+    #logo-container {
+        width: 200px; 
+        height: 60px;
+        margin: 30px auto 40px auto; 
+    }
+
+    .logo-text {
+        font-size: 1em; 
+        letter-spacing: 2px;
+    }
+    
+    /* Adjust Button Size */
+    .link-btn {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    .priority-link {
+        padding: 16px;
+        font-size: 1em;
+    }
+}
