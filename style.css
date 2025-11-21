@@ -1,4 +1,4 @@
-:root {
+ :root {
     /* Define the core brand accent color (Lime Green) */
     --accent-lime: #aaff00;
     
@@ -21,11 +21,15 @@ body {
     color: var(--light-text);
     /* Font for the techno/industrial feel */
     font-family: 'Roboto Mono', 'Courier New', monospace; 
+    
+    /* CRITICAL ALIGNMENT & OVERFLOW FIXES */
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* <-- NEW: Prevents horizontal scroll/misalignment */
+    
     display: flex; 
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Horizontally centers content */
+    align-items: center;     /* Vertically centers content */
     min-height: 100vh; 
 }
 
@@ -34,12 +38,12 @@ body {
     width: 90%;
     max-width: 500px; /* Standard link-in-bio width */
     padding: 20px;
-    text-align: center;
+    text-align: center; /* Centers inline/text content inside */
     /* Optional: Slight dark box around the content area */
     background-color: rgba(0, 0, 0, 0.4); 
     border-radius: 8px;
     border: 1px solid rgba(170, 255, 0, 0.2); /* Thin lime border */
-    z-index: 10; /* Ensures container is above the gradient background */
+    z-index: 10; 
 }
 
 /* --- 2. Spinning Oval Logo (3D Rotation) --- */
@@ -58,11 +62,11 @@ body {
     
     /* 3D Properties: Important for making rotateY look right */
     perspective: 1000px; 
-    transform-style: preserve-3d; /* Fixes border rendering during 3D transform */
+    transform-style: preserve-3d; 
     
     /* Apply the animation */
     animation: spin3D 8s linear infinite; 
-    margin: 40px auto 60px auto; /* Spacing */
+    margin: 40px auto 60px auto; /* Auto margins ensure horizontal centering */
 }
 
 .logo-text {
@@ -70,7 +74,7 @@ body {
     text-transform: uppercase;
     font-size: 1.2em;
     letter-spacing: 3px; 
-    backface-visibility: hidden; /* Recommended for 3D spinning text */
+    backface-visibility: hidden; 
 }
 
 /* Keyframe Definition for 3D Spinning */
@@ -88,7 +92,7 @@ body {
     display: block;
     width: 100%; /* Fill the container width */
     max-width: 400px;
-    margin: 20px auto;
+    margin: 20px auto; /* Auto margins ensure horizontal centering */
     padding: 18px;
     text-align: center;
     text-decoration: none;
@@ -97,7 +101,7 @@ body {
     /* Default styling */
     color: var(--accent-lime);
     border: 1px solid var(--accent-lime);
-    background-color: rgba(170, 255, 0, 0.1); /* Subtle lime background */
+    background-color: rgba(170, 255, 0, 0.1); 
     font-weight: bold;
     letter-spacing: 1px;
     
@@ -106,16 +110,15 @@ body {
 
 .link-btn:hover {
     background-color: var(--accent-lime);
-    color: var(--dark-bg); /* Dark text on bright background for contrast */
-    box-shadow: 0 0 25px var(--accent-lime); /* Stronger glow on hover */
-    transform: scale(1.03); /* Subtle scale up */
+    color: var(--dark-bg); 
+    box-shadow: 0 0 25px var(--accent-lime); 
+    transform: scale(1.03); 
 }
 
 /* Style for the priority link (optional distinct look) */
 .priority-link {
     font-size: 1.1em;
     padding: 20px;
-    /* Make the priority link slightly more dominant */
     background-color: rgba(170, 255, 0, 0.25);
     border-width: 2px;
 }
