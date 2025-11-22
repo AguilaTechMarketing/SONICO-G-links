@@ -1,39 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHRISTIAN VALENTIN INFRASTRUCTURE</title>
-    
-    <link rel="stylesheet" href="style.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YPLTRY8RV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SÓNICO G INFRASTRUCTURE</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YPLTRY8RV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-3YPLTRY8RV');
-</script>
+      gtag('config', 'G-3YPLTRY8RV');
+    </script>
 </head>
 <body>
-    
-        <div class="container">
-        
-        <div id="logo-container" class="spinning-oval-logo">
-            <span class="logo-text">SÓNICO G</span>
+    
+    <canvas id="dynamic-canvas"></canvas>
+
+    <div class="container">
+        
+        <div id="background-icon">
+            <img src="images/sg_logo_icon.png" alt="Sónico G Static Icon" class="static-icon"> 
         </div>
-        
-                <a href="[SPOTIFY_LINK]" class="link-btn priority-link">LISTEN ON SPOTIFY</a>
-        <a href="[SOUNDCLOUD_LINK]" class="link-btn">SOUNDCLOUD</a>
-        <a href="[INSTAGRAM_LINK]" class="link-btn">FOLLOW ON IG</a>
-        <a href="[TIKTOK_LINK]" class="link-btn">FOLLOW ON TIKTOK</a>    
+
+        <div id="logo-container" class="spinning-oval-logo">
+            <div class="logo-flipper">
+                
+                <div class="logo-face logo-front">
+                    <span class="logo-text">SÓNICO G</span>
+                </div>
+                
+                <div class="logo-face logo-back">
+                    <img src="C:\Users\aleja\OneDrive\Desktop\Aguila_Tech_Marketing\CGV_Music\img/SG_Logo.png" class="sg-logo-image" alt="Sónico G Logo">
+                </div>
+
+            </div>
+        </div>
+        
+        <ul class="link-list">
+            <li><a href="https://open.spotify.com/artist/5VBTpVynAB49cfpQlxyOue?si=rfRkcVuSRv2l22L9no8q0g" class="link-btn priority-link">LISTEN ON SPOTIFY</a></li>
+            <li><a href="https://on.soundcloud.com/FWBOUpTmG07T3f9kNS" class="link-btn">SOUNDCLOUD</a></li>
+            <li><a href="https://www.instagram.com/s0nic0g?igsh=YjJrd2lkdmFudng%3D&utm_source=qr" class="link-btn">FOLLOW ON INSTAGRAM</a></li>
+            <li><a href="https://www.tiktok.com/@deejayvalentine?_r=1&_t=ZP-91avjc8nvws" class="link-btn">TIKTOK</a></li>
+        </ul>
 
         <div class="footer-info">
-            <p>Next Event: Philadelphia - 01/18/2026</p>
+            <p>Next Event: Check IG for Updates</p>
         </div>
-    </div>
+    </div>
+    
 </body>
 </html>
-
-
-
