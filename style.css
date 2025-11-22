@@ -1,3 +1,11 @@
+/* --- 0. UNIVERSAL RESET (CRITICAL FIX FOR MOBILE) --- */
+/* This ensures padding doesn't make buttons wider than the screen */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     /* Define the core brand accent color (Lime Green) */
     --accent-lime: #aaff00;
@@ -17,10 +25,9 @@ body {
     color: var(--light-text);
     font-family: 'Roboto Mono', 'Courier New', monospace; 
     
-    margin: 0;
-    padding: 0;
     display: flex; 
     min-height: 100vh; 
+    overflow-x: hidden; /* Double protection against horizontal scrolling */
 }
 
 /* --- 5. Canvas Positioning --- */
@@ -79,7 +86,7 @@ body {
     object-fit: contain; 
 }
 
-/* --- 2. Spinning Oval Logo (UPDATED FOR IMAGE) --- */
+/* --- 2. Spinning Oval Logo (IMAGE VERSION) --- */
 #logo-container {
     width: 250px;
     height: 80px;
@@ -115,138 +122,15 @@ body {
     transform: rotateY(0deg); 
 }
 
-/* UPDATED: Solid background hides the front text */
+/* Back Face: Solid background so text doesn't show through */
 .logo-back {
     transform: rotateY(180deg);
     background-color: #000; 
     border-radius: 50%;
-    overflow: hidden; /* Ensures image doesn't spill out */
+    overflow: hidden; 
 }
 
-/* NEW: Styles the SG Logo Image */
+/* SG Logo Image Styling */
 .sg-logo-image {
     height: 85%;
-    width: auto;
-    object-fit: contain;
-    filter: drop-shadow(0 0 5px var(--accent-lime));
-}
-
-.logo-text {
-    color: var(--accent-lime); 
-    text-transform: uppercase;
-    font-size: 1.2em;
-    letter-spacing: 3px; 
-}
-
-@keyframes spin3D {
-    from {
-        transform: rotateY(0deg); 
-    }
-    to {
-        transform: rotateY(360deg); 
-    }
-}
-
-/* --- 6. Link List Structure --- */
-.link-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    margin-bottom: 30px; 
-}
-
-.link-list li {
-    margin-bottom: 25px; 
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
-
-.link-list li:last-child {
-    margin-bottom: 0;
-}
-
-/* --- 3. Lime Green Buttons --- */
-.link-btn {
-    display: block;
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto; 
-    padding: 18px; 
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    
-    color: var(--accent-lime);
-    border: 1px solid var(--accent-lime);
-    background-color: rgba(170, 255, 0, 0.1); 
-    font-weight: bold;
-    letter-spacing: 1px;
-    
-    transition: all 0.3s ease;
-}
-
-.link-btn:hover {
-    background-color: var(--accent-lime);
-    color: var(--dark-bg); 
-    box-shadow: 0 0 25px var(--accent-lime); 
-    transform: scale(1.03); 
-}
-
-.priority-link {
-    font-size: 1.1em;
-    padding: 20px;
-    background-color: rgba(170, 255, 0, 0.25);
-    border-width: 2px;
-}
-
-/* Footer Information Styling */
-.footer-info {
-    margin-top: 0;
-    padding-top: 30px; 
-    font-size: 0.8em;
-    color: rgba(240, 240, 240, 0.6);
-}
-
-/* --- 4. Mobile Responsiveness --- */
-@media screen and (max-width: 600px) {
-    
-    body {
-        font-size: 14px;
-    }
-
-    .container {
-        padding: 10px;
-        width: 95%;
-    }
-
-    #logo-container {
-        width: 200px; 
-        height: 60px;
-        margin: 30px auto 40px auto; 
-    }
-
-    .logo-text {
-        font-size: 1em; 
-        letter-spacing: 2px;
-    }
-    
-    /* Adjust image size for mobile */
-    .sg-logo-image {
-        height: 80%;
-    }
-    
-    .link-list li {
-        margin-bottom: 15px; 
-    }
-
-    .link-btn {
-        padding: 15px;
-    }
-
-    .priority-link {
-        padding: 16px;
-        font-size: 1em;
-    }
-}
+    width
